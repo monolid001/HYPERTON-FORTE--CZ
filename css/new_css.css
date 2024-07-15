@@ -3574,8 +3574,8 @@ input:-moz-ui-invalid {
     transition-delay: 0.1s;
   }
   .promo-last .promo__pack {
-    right: -30px;
-    bottom: -40px;
+    right: 90px;
+    bottom: 0px;
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
   }
