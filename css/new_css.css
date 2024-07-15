@@ -3780,10 +3780,10 @@ input:-moz-ui-invalid {
     transition-delay: 0.4s;
   }
   .helps__pack--double img {
-    max-width: 300px;
+    max-width: 210px;
     width: 100%;
     position: relative;
-    right: 0px;
+    right: -75px;
     top: 23px;
   }
   .helps__form {
@@ -3882,8 +3882,8 @@ input:-moz-ui-invalid {
   }
   .action__pack img {
     position: relative;
-    max-width: 460px;
-    left: 25px;
+    max-width: 310px;
+    left: 40px;
   }
   .action__content {
     max-width: 720px;
@@ -4857,7 +4857,7 @@ input:-moz-ui-invalid {
 }
 
 .promo-pack-prod__img {
-  max-width: 290px;
+  max-width: 255px;
   position: relative;
   left: -126px;
   top: -14px;
