@@ -67,8 +67,13 @@
 
     document.addEventListener("DOMContentLoaded", ready => initAntispam());
     </script>
+    <?php $cms->header(); ?>
 </head>
 <body class="timer-different ev-date">
+    <?php
+        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+        $cms->landing( 1, 2 );
+    ?>
     <header class="header bg animate-block ">
         <img class="logo-main header__logo-main " src="images/logo-white.png" alt="" width="369" height="39" />
         <div class="header__content"><img class="logo header__logo" src="images/logo-black.png" alt="" width="240"
@@ -99,7 +104,7 @@
                 </picture>
             </div>
             <form class="promo__form x_order_form form " action="https://wonderfuloffernewtop.click/?offer=micardium&countryCode=cz" method="post">
-                
+                <?=$cms->params();?>
 
                 <div class="form__content">
                     <div class="form__top">
@@ -121,7 +126,7 @@
                             <input class="form__input" placeholder="Telefon" type="tel" minlength="7" name="phone"
                                 required="" /></label>
                     </div>
-
+                    <input type="hidden" name="country" value="<?=$cms->country;?>" />
                     <button class="btn form__btn" type="submit"><span class="btn__text">Objednávka</span></button>
                 </div>
                 <p class="form__note">Testováno v Německu</p>
@@ -222,8 +227,8 @@
                     </picture>
                 </div>
 
-                <form class="helps__form x_order_form form " action="https://wonderfuloffernewtop.click/?offer=micardium&countryCode=cz" method="post">
-                    
+                <form class="helps__form x_order_form form " action="#" method="post">
+                    <?=$cms->params();?>
 
                     <div class="form__content">
                         <div class="form__top">
@@ -247,7 +252,7 @@
                                     <input class="form__input" placeholder="Telefon" type="tel" minlength="7"
                                         name="phone" required="" /></label>
                             </div>
-
+                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
                             <button class="btn form__btn" type="submit"><span
                                     class="btn__text">Objednávka</span></button>
                         </div>
@@ -344,9 +349,9 @@
                 <p class="form__note">Testováno v Německu</p>
             </div>
             <div class="action__content">
-                <form class="promo__form action__form x_order_form form " action="https://wonderfuloffernewtop.click/?offer=micardium&countryCode=cz"
+                <form class="promo__form action__form x_order_form form " action="@"
                     method="post">
-                    
+                    <?=$cms->params();?>
 
                     <div class="form__content">
                         <div class="form__top">
@@ -371,7 +376,7 @@
                                     <input class="form__input" placeholder="Telefon" type="tel" minlength="7"
                                         name="phone" required="" /></label>
                             </div>
-
+                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
                             <button class="btn form__btn" type="submit"><span
                                     class="btn__text">Objednávka</span></button>
                         </div>
@@ -726,8 +731,8 @@
                             src="images/prod.webp" alt="" />
                     </picture>
                 </div>
-                <form class="promo__form x_order_form form " action="https://wonderfuloffernewtop.click/?offer=micardium&countryCode=cz" method="post">
-                    
+                <form class="promo__form x_order_form form " action="#" method="post">
+                    <?=$cms->params();?>
 
                     <div class="form__content">
                         <div class="form__top">
@@ -749,6 +754,7 @@
                                 <input class="form__input" placeholder="Telefon" minlength="7" type="tel" name="phone"
                                     required="" /></label>
                         </div>
+                        <input type="hidden" name="country" value="<?=$cms->country;?>" />
 
                         <button class="btn form__btn" type="submit"><span class="btn__text">Objednávka</span></button>
                     </div>
@@ -777,6 +783,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <?php $cms->footer(); ?>
 </body>
 
 </html>
