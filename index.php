@@ -1,6 +1,14 @@
 ﻿
+<?php
+    $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+    $cms->landing( 1, 2 );
+
+    $cms->thankspage = DIR . './success/success.php';
+    define( 'THANKSPAGE', $_SERVER['DOCUMENT_ROOT'] . './success/success.php' );
+?>
+
 <!DOCTYPE html>
-<html lang="pt" dir="ltr" class="webp webp-alpha webp-animation webp-lossless">
+<html lang="cz" dir="ltr" class="webp webp-alpha webp-animation webp-lossless">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,10 +78,6 @@
     <?php $cms->header(); ?>
 </head>
 <body class="timer-different ev-date">
-    <?php
-        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
-        $cms->landing( 1, 2 );
-    ?>
     <header class="header bg animate-block ">
         <img class="logo-main header__logo-main " src="images/logo-white.png" alt="" width="369" height="39" />
         <div class="header__content"><img class="logo header__logo" src="images/logo-black.png" alt="" width="240"
@@ -108,13 +112,13 @@
 
                 <div class="form__content">
                     <div class="form__top">
-                        <h3 class="form__title">sleva <span class="text-accent fw500">50%</span> pouze dnes: </h3>
+                        <h3 class="form__title">sleva <span class="text-accent fw500"><?=$cms->discount;?></span> pouze dnes: </h3>
                         <div class="price form__price">
                             <div class="price__part price__old"><span
-                                    class="x_price_previous">1780</span> <span
+                                    class="x_price_previous"><?=$cms->oldpr;?></span> <span
                                     class="x_currency">CZK</span></div>
                             <div class="price__part price__new text-accent"><span
-                                    class="x_price_current">890 </span><span
+                                    class="x_price_current"><?=$cms->price;?></span><span
                                     class="x_currency">CZK</span></div>
                         </div>
                     </div>
@@ -232,14 +236,14 @@
 
                     <div class="form__content">
                         <div class="form__top">
-                            <h3 class="form__title">sleva <span class="text-accent fw500">50%</span> pouze dnes: </h3>
+                            <h3 class="form__title">sleva <span class="text-accent fw500"><?=$cms->discount;?></span> pouze dnes: </h3>
                             <div class="price form__price form__price--border">
                                 <div class="price__part price__old"><span
-                                        class="x_price_previous">1780</span> <span
+                                        class="x_price_previous"><?=$cms->oldpr;?></span> <span
                                         class="x_currency">CZK</span></div><span
                                     class="price__div"></span>
                                 <div class="price__part price__new text-accent"><span
-                                        class="x_price_current">890 </span><span
+                                        class="x_price_current"><?=$cms->price;?></span><span
                                         class="x_currency">CZK</span></div>
                             </div>
                         </div>
@@ -355,14 +359,14 @@
 
                     <div class="form__content">
                         <div class="form__top">
-                            <h3 class="form__title">sleva <span class="text-accent">50%</span> pouze dnes:</h3>
+                            <h3 class="form__title">sleva <span class="text-accent"><?=$cms->discount;?></span> pouze dnes:</h3>
                             <div class="price form__price form__price--border">
                                 <div class="price__part price__old"><span
-                                        class="x_price_previous">1780</span> <span
+                                        class="x_price_previous"><?=$cms->oldpr;?></span> <span
                                         class="x_currency">CZK</span></div><span
                                     class="price__div"></span>
                                 <div class="price__part price__new text-accent"><span
-                                        class="x_price_current">890 </span><span
+                                        class="x_price_current"><?=$cms->price;?></span><span
                                         class="x_currency">CZK</span></div>
                             </div>
                         </div>
@@ -736,13 +740,13 @@
 
                     <div class="form__content">
                         <div class="form__top">
-                            <h3 class="form__title">sleva <span class="text-accent fw500">50%</span> pouze dnes:</h3>
+                            <h3 class="form__title">sleva <span class="text-accent fw500"><?=$cms->discount;?></span> pouze dnes:</h3>
                             <div class="price form__price">
                                 <div class="price__part price__old"><span
-                                        class="x_price_previous">1780</span> <span
+                                        class="x_price_previous"><?=$cms->oldpr;?></span> <span
                                         class="x_currency">CZK</span></div>
                                 <div class="price__part price__new text-accent"><span
-                                        class="x_price_current">890 </span><span
+                                        class="x_price_current"><?=$cms->price;?></span><span
                                         class="x_currency">CZK</span></div>
                             </div>
                         </div>
